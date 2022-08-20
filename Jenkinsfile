@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent docker-slave-cluster
   
   parameters {
     password (name: 'AWS_ACCESS_KEY_ID')
