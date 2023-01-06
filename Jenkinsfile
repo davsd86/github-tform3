@@ -14,7 +14,7 @@ pipeline {
   stages {
     stage('Terraform Init') {
       steps {
-        sh "terraform init -input=false"
+        sh "terraform init -input=false -verify-plugins=false"
       }
     }
     stage('Terraform Plan') {
