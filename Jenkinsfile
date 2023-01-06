@@ -17,15 +17,12 @@ pipeline {
         sh "terraform init -input=false -verify-plugins=false"
       }
     }
-    stage('Terraform Plan') {
-      steps {
-        sh "terraform plan -out=tfplan -input=false -var-file='dev.tfvars'"
-      }
+    
     }
     stage('Terraform Apply') {
       steps {
         input 'Apply Plan'
-        sh "terraform apply -input=false tfplan"
+        sh "terraform apply -input=false -auto-approve"
       }
     }
   }
