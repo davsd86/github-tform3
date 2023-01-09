@@ -1,5 +1,6 @@
 variable "access_key" {
   description = "AWS Access key ID"
+  default     = ""
 }
 
 variable "secret_key" {
