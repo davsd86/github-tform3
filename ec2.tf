@@ -3,6 +3,6 @@ resource "aws_instance" "test3" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = "bitbucketest4"
+    Name = "bitbucketest5"
   }
 }
